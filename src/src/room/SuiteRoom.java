@@ -1,21 +1,21 @@
-package UC2;
+package room;
 
 /**
  * ================================================================
- * CLASS - DoubleRoom
+ * CLASS - SuiteRoom
  * ================================================================
  *
- * Represents a double room in the hotel.
+ * Represents a suite room in the hotel.
  *
  * @version 2.1
  */
-public class DoubleRoom extends Room {
+public class SuiteRoom extends Room {
 
     /**
-     * Initializes a DoubleRoom with
+     * Initializes a SuiteRoom with
      * predefined attributes.
      */
-    public DoubleRoom() {
-        super(2, 400, 2500.0);
+    public SuiteRoom() {
+        super(3, 800, 5000.0);
     }
 }

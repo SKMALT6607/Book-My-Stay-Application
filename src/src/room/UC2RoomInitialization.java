@@ -1,4 +1,4 @@
-package UC2;
+package room;
 
 public class UseCase2RoomInitialization {
 
