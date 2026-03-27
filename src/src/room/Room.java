@@ -1,52 +1,36 @@
 package room;
 
-/**
- * ================================================================
- * ABSTRACT CLASS - Room
- * ================================================================
- *
- * Use Case 2: Basic Room Types & Static Availability
- *
- * Description:
- * This abstract class represents a generic hotel room.
- *
- * It models attributes that are intrinsic to a room type
- * and remain constant regardless of availability.
- *
- * Inventory-related concerns are intentionally excluded.
- *
- * @version 2.1
- */
-public abstract class Room {
+public class Room {
+    String roomType;
+    double price;
+    String amenities;
 
-    /** Number of beds available in the room. */
-    protected int numberOfBeds;
-
-    /** Total size of the room in square feet. */
-    protected int squareFeet;
-
-    /** Price charged per night for this room type. */
-    protected double pricePerNight;
-
-    /**
-     * Constructor used by child classes to
-     * initialize common room attributes.
-     *
-     * @param numberOfBeds number of beds in the room
-     * @param squareFeet total room size
-     * @param pricePerNight cost per night
-     */
-    public Room(int numberOfBeds, int squareFeet, double pricePerNight) {
-        this.numberOfBeds = numberOfBeds;
-        this.squareFeet = squareFeet;
-        this.pricePerNight = pricePerNight;
+    public Room(String roomType, double price, String amenities) {
+        this.roomType = roomType;
+        this.price = price;
+        this.amenities = amenities;
     }
 
-    /** Displays room details. */
-    public void displayRoomDetails() {
-        System.out.println("Room Details:");
-        System.out.println("Beds: " + numberOfBeds);
-        System.out.println("Size: " + squareFeet + " sq ft");
-        System.out.println("Price per night: $" + pricePerNight);
+    public Room() {
+
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getAmenities() {
+        return amenities;
+    }
+
+    @Override
+    public String toString() {
+        return "Room Type: " + roomType +
+                ", Price: " + price +
+                ", Amenities: " + amenities;
     }
 }
